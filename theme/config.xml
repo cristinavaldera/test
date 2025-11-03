@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <theme>
-  <name>simo</name>
-  <title>SIMO</title>
+  <name>base</name>
+  <title>Default</title>
   <version>2025</version>
   <compatibility>3.0</compatibility>
   <author>eXeLearning.net</author>
@@ -10,5 +10,5 @@
   <description>Minimally-styled, feature rich responsive style for eXe.
 
 iDevice icons by Francisco Javier Pulido Cuadrado.</description>
-  <downloadable>1</downloadable>
+  <downloadable>0</downloadable>
 </theme>

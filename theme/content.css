@@ -550,34 +550,3 @@ label[for='teacher-mode-toggler']{font-size:.9em;color:#777;position:relative;to
     .exe-web-site main.page{padding-left: 0;padding-right: 0}
     .exe-web-site main.page{padding-top:1em}
 }
-
-/* Presentation */
-#sidebar-nav.fixed{
-    top: 0
-}
-.exe-web-site main.page{
-    padding-top:0;
-}
-.exe-web-site .page-header,
-.exe-web-site .box-head,
-.exe-web-site #siteFooter{
-    position: absolute !important;
-    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-    clip: rect(1px, 1px, 1px, 1px); 
-}
-.exe-web-site .box .box-content{
-    padding: 0;
-    border-radius: 0;
-    border: none;
-    background: none;
-}
-.exe-web-site .box .box-content p{
-    margin: 0
-}
-.exe-web-site .box .box-content img{
-    max-height: 100vh;
-    width: auto;
-    margin: 0 auto;
-    display: block;
-    vertical-align: middle;
-}

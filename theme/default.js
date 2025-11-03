@@ -101,8 +101,6 @@ var myTheme = {
         });
         // Search form
         this.searchForm();
-        // Enable keyboard
-        document.onkeydown = myTheme.checkKey;
     },
     inIframe: function () {
         try {
@@ -113,62 +111,6 @@ var myTheme = {
     },
     searchForm: function () {
         $('#exe-client-search-text').attr('class', 'form-control');
-    },
-    checkKey : function(e){
-        // Actions
-        var x = e || window.event;
-        var kC = x.keyCode;
-        if (kC=="116") {
-            // Presenter: t (end button)
-            e.preventDefault(); // 116 opens Firefox console
-            return;
-        }
-        // if ($(window).width()<750) return false;
-        // Links
-        var p = $(".nav-buttons");
-        var url;
-        // Previous
-        var prevURL = "";
-        var prevLnk = $(".nav-button-left",p);
-        if (prevLnk.length==1) prevURL = prevLnk.attr("href");
-        // Previous
-        var nextURL = "";
-        var nextLnk = $(".nav-button-right",p);
-        if (nextLnk.length==1) nextURL = nextLnk.attr("href");
-        
-        // Actions
-        if (kC=='38'||kC=='66') {
-            // up arrow (66 for presenter: b)
-            window.location = $("a.main-node").attr("href");
-        } else if (kC=='40'||kC=='27'||kC=='16') {
-            // down arrow (27 and 16 for presenter: "\u001b" and "\u0010")
-            var lis = $("#siteNav a");
-            url = lis.eq(lis.length-1).attr("href");
-            if ($("body").hasClass("siteNav-off")) url += "?nav=false";
-            if (typeof(url)!='undefined' && url!="") window.location=url;
-        } else if (kC=='37' || kC=='33') {
-            // left arrow (33 for presenter: !)
-            if (typeof(prevURL)!='undefined' && prevURL!="") window.location=prevURL;
-        } else if (kC=='32' || kC=='39' || kC=='34') {
-            // space bar or right arrow (34 for presenter: ")
-            if (typeof(nextURL)!='undefined' && nextURL!="") window.location=nextURL;
-        } else if (kC=='77') {
-            // m
-            $("#siteNavToggler").trigger("click");
-            // if ($("body").hasClass("siteNav-off") myTheme.toggleMenu();
-            // else myTheme.hideMenu();
-        } else if (kC=='107') {
-            // Steps: +
-            // $(".presentation-slide").not(":visible").eq(0).fadeIn();
-            // $("#steps-instructions").hide();
-        } else if (kC=='109') {
-            // Steps: -
-            // var visibleSteps = $(".presentation-slide").not(":hidden");
-            // if (visibleSteps.length>0) {
-                // if (visibleSteps.length==1) $("#steps-instructions").show();
-                // $(".presentation-slide").eq(visibleSteps.length-1).hide();
-            // }
-        }
     },
     isLowRes: function () {
         return $('#siteNav').css('float') == 'none';
